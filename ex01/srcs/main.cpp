@@ -93,7 +93,7 @@ int main(void)
                 if (command[1] == '\0')
                 {
                         j = command[0] - 48;
-                    if (j < 0 || j >= (unsigned long)i)
+                    if (j >= (unsigned long)i)
                         std::cout<<"Wrong index input\n";
                     else
                         contact[j].SEARCH();
