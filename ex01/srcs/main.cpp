@@ -46,16 +46,43 @@ int main(void)
                         format.append(c);
                         format.append("|");
                         if (contact[j].first_name.length() < 10)
+                        {
                             format.append(space.substr(0, 10 - contact[j].first_name.length()));
-                        format.append(contact[j].first_name.substr(0, 10));
+                            format.append(contact[j].first_name.substr(0, 10));
+                        }
+                        else if (contact[j].first_name.length() > 10)
+                        {
+                            format.append(contact[j].first_name.substr(0, 9));
+                            format.append(".");
+                        }
+                        else
+                            format.append(contact[j].first_name.substr(0, 10));
                         format.append("|");
                         if (contact[j].last_name.length() < 10)
+                        {
                             format.append(space.substr(0, 10 - contact[j].last_name.length()));
-                        format.append(contact[j].last_name.substr(0, 10));
+                            format.append(contact[j].last_name.substr(0, 10));
+                        }
+                        else if (contact[j].last_name.length() > 10)
+                        {
+                            format.append(contact[j].last_name.substr(0, 10));
+                            format.append(".");
+                        }
+                        else
+                            format.append(contact[j].last_name.substr(0, 10));
                         format.append("|");
                         if (contact[j].nick_name.length() < 10)
+                        {
                             format.append(space.substr(0, 10 - contact[j].nick_name.length()));
-                        format.append(contact[j].nick_name.substr(0, 10));
+                            format.append(contact[j].nick_name.substr(0, 10));
+                        }
+                        else if (contact[j].nick_name.length() > 10)
+                        {
+                            format.append(contact[j].nick_name.substr(0, 9));
+                            format.append(".");
+                        }
+                        else
+                            format.append(contact[j].nick_name.substr(0, 10));
                         format.append("|");
                         std::cout<<format<<std::endl;
                         format.erase(0, format.length());
