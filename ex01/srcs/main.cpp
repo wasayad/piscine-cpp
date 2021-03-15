@@ -65,7 +65,7 @@ int main(void)
                         }
                         else if (contact[j].last_name.length() > 10)
                         {
-                            format.append(contact[j].last_name.substr(0, 10));
+                            format.append(contact[j].last_name.substr(0, 9));
                             format.append(".");
                         }
                         else
