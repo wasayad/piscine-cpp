@@ -1,4 +1,4 @@
-SRC = 		./srcs/main.cpp
+SRC = 		./srcs/phonebook.cpp
 
 OBJ = 		${SRC:.c=.o}
 CC = 		clang++
