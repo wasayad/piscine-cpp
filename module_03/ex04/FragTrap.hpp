@@ -7,7 +7,7 @@
 #include <time.h>
 #include "ClapTrap.hpp"
 
-class   FragTrap : public ClapTrap
+class   FragTrap : virtual public ClapTrap
 {
     public:
         FragTrap();
@@ -16,6 +16,7 @@ class   FragTrap : public ClapTrap
         ~FragTrap();
         FragTrap&       operator=(FragTrap& copy);
         void            vaulthunter_dot_exe(std::string const & target);
+        void            rangedAttack(std::string const& target);
 };
 
 #endif

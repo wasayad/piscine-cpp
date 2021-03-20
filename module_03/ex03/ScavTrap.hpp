@@ -10,8 +10,11 @@
 class   ScavTrap : public ClapTrap
 {
     public:
+        ScavTrap();
         ScavTrap(std::string n_name);
+        ScavTrap(ScavTrap& copy);
         ~ScavTrap();
+        ScavTrap&       operator=(ScavTrap& copy);
         void            challengeNewcomer(std::string const & target);
 };
 

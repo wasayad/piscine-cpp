@@ -1,5 +1,10 @@
 #include "ScavTrap.hpp"
 
+ScavTrap::ScavTrap()
+{
+
+}
+
 ScavTrap::ScavTrap(std::string n_name): Hit_Points(100), 
 Max_Hit_Points(100), Energy_points(50), Max_Energy_Points(50), Level(1), Name(n_name), Melee_Attack_Damage(20), Ranged_Attack_Damage(15),
 Armor_Damage_Reduction(3)
@@ -11,6 +16,27 @@ ScavTrap::~ScavTrap()
 {
     std::cout<<"42 electronics destroyed : SC4V-TP "<< Name <<std::endl;
 }
+
+ScavTrap::ScavTrap(ScavTrap& copy)
+{
+    *this = copy;
+}
+
+ScavTrap&       ScavTrap::operator=(ScavTrap& copy)
+{
+    Hit_Points = copy.Hit_Points;
+    Max_Hit_Points = copy.Max_Hit_Points;
+    Energy_points = copy.Energy_points;
+    Max_Energy_Points = copy.Max_Energy_Points;
+    Level = copy.Level;
+    Name = copy.Name;
+    Melee_Attack_Damage = copy.Melee_Attack_Damage;
+    Ranged_Attack_Damage = copy.Ranged_Attack_Damage;
+    Armor_Damage_Reduction = copy.Armor_Damage_Reduction;
+    std::cout<<"42 electronics copying an old ClapTrap to a new one\n";
+    return *this;
+}
+
 
 void    ScavTrap::rangedAttack(std::string const& target)
 {
@@ -24,7 +50,7 @@ void    ScavTrap::meleeAttack(std::string const& target)
 
 void    ScavTrap::takeDamage(unsigned int amount)
 {
-    if (Hit_Points - ((int)amount - Armor_Damage_Reduction) < 0)
+    if (Hit_Points < (amount - Armor_Damage_Reduction))
     {
         Hit_Points = 0;
         std::cout<<"SC4V-TP "<< Name<< " take " << amount << " damage point ! Hp left: " << Hit_Points<<std::endl;
@@ -32,15 +58,15 @@ void    ScavTrap::takeDamage(unsigned int amount)
     }
     else
     {
-        Hit_Points = Hit_Points -  ((int)amount - Armor_Damage_Reduction);
+        Hit_Points = Hit_Points -  (amount - Armor_Damage_Reduction);
         std::cout<<"SC4V-TP "<< Name<< " take " << amount << " damage point ! Hp left: " << Hit_Points<<std::endl;
     }
 }
 
 void    ScavTrap::beRepaired(unsigned int amount)
 {
-    if (Hit_Points + (int)amount < Max_Hit_Points)
-        Hit_Points = Hit_Points + (int)amount;
+    if (Hit_Points + amount < Max_Hit_Points)
+        Hit_Points = Hit_Points + amount;
     else
         Hit_Points = 100;
     std::cout<<"SC4V-TP "<< Name<< " is restored of  " << amount << ", Hp after restore: " << Hit_Points<<std::endl;
@@ -48,7 +74,6 @@ void    ScavTrap::beRepaired(unsigned int amount)
 
 void    ScavTrap::challengeNewcomer(std::string const & target)
 {
-    srand (time(NULL));
     int iSecret = rand() % 5;
     if (Energy_points > 0)
     {
@@ -59,7 +84,7 @@ void    ScavTrap::challengeNewcomer(std::string const & target)
         else if (iSecret == 2)
             std::cout<< Name <<" challenge "<< target<<" to avoid taking a break while sitting next to coscialp"<<std::endl;
         else if (iSecret == 3)
-            std::cout<< Name <<" ask "<< target<<" to 1v1 him on chess.io\n"<<std::endl;
+            std::cout<< Name <<" ask "<< target<<" to 1v1 him on chess.io"<<std::endl;
         else if (iSecret == 4)
         {
             std::cout<< Name << " evolve due to a memory overflow : "<< target << " is lost in an invalid free\n";

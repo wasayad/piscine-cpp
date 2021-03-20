@@ -4,6 +4,7 @@ FragTrap::FragTrap()
 {
     
 }
+
 FragTrap::FragTrap(std::string n_name): ClapTrap(n_name, 100, 100, 100, 100, 30, 20, 5)
 {
     std::cout<<"42 electronics create : FR4G-TP "<< n_name<<std::endl;
@@ -36,6 +37,7 @@ FragTrap&       FragTrap::operator=(FragTrap& copy)
 
 void    FragTrap::vaulthunter_dot_exe(std::string const & target)
 {
+    srand (time(NULL));
     int iSecret = rand() % 5;
     if (Energy_points > 0)
     {
@@ -58,5 +60,9 @@ void    FragTrap::vaulthunter_dot_exe(std::string const & target)
     {
         std::cout<<"No energy left\n";
     }
+}
 
+void            FragTrap::rangedAttack(std::string const& target)
+{
+    std::cout<<"ranged attack from FragTrap class "<< target <<std::endl;
 }

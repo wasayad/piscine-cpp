@@ -7,7 +7,7 @@
 #include <time.h>
 #include "ClapTrap.hpp"
 
-class   NinjaTrap : public ClapTrap
+class   NinjaTrap : virtual public ClapTrap
 {
     public:
         NinjaTrap();
@@ -16,6 +16,7 @@ class   NinjaTrap : public ClapTrap
         void            ninjaShoebox(ClapTrap & target);
         void            ninjaRestore(ClapTrap & target);
         void            ninjaRename(ClapTrap & target);
+        void            meleeAttack(std::string const& target);
 };
 
 #endif

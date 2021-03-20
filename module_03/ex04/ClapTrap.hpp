@@ -30,7 +30,7 @@ class   ClapTrap
         unsigned int             Energy_points;
         unsigned int             Max_Energy_Points;
         unsigned int             Level;
-        std::string     Name;
+        std::string             Name;
         unsigned int             Melee_Attack_Damage;
         unsigned int             Ranged_Attack_Damage;
         unsigned int             Armor_Damage_Reduction;

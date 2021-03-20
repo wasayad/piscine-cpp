@@ -2,7 +2,7 @@
 
 ClapTrap::ClapTrap()
 {
-
+    std::cout<<"42 electronics create : ClapTrap "<<std::endl;
 }
 
 ClapTrap::ClapTrap(std::string n_name, int hp, int mhp, int mana, int mmana, int ad, int adr, int armor): Hit_Points(hp), 
@@ -73,7 +73,10 @@ void    ClapTrap::beRepaired(unsigned int amount)
 
 void    ClapTrap::setHp(int n_np)
 {
-    Hit_Points += n_np;
+    if (Hit_Points  + (n_np + Armor_Damage_Reduction) < 0 )
+        Hit_Points = 0;
+    else if (!(Hit_Points + (n_np + Armor_Damage_Reduction) > Max_Hit_Points))
+        Hit_Points += (n_np + Armor_Damage_Reduction);
 }
 
 void    ClapTrap::setName(std::string n_name)

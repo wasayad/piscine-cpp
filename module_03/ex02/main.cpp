@@ -3,9 +3,14 @@
 
 int main()
 {
-    FragTrap max = FragTrap("max");
-    ScavTrap loubouf = ScavTrap("loubouf");
+    srand (time(NULL));
+    FragTrap max("max");
+    ScavTrap loubouf("loubouf");
 
+    max.vaulthunter_dot_exe("unpokemon");
+    max.vaulthunter_dot_exe("unpokemon");
+    max.vaulthunter_dot_exe("unpokemon");
+    max.vaulthunter_dot_exe("unpokemon");
     max.vaulthunter_dot_exe("unpokemon");
     max.meleeAttack("drake");
     max.rangedAttack("drake");
@@ -17,4 +22,9 @@ int main()
     loubouf.takeDamage(125);
     loubouf.beRepaired(50);
     loubouf.challengeNewcomer("unknown");
+    loubouf.challengeNewcomer("unknown");
+    loubouf.challengeNewcomer("unknown");
+    loubouf.challengeNewcomer("unknown");
+    loubouf.challengeNewcomer("unknown");
+    
 }
