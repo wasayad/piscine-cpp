@@ -12,9 +12,9 @@ Armor_Damage_Reduction(5)
     std::cout<<"42 electronics create : FR4G-TP "<< n_name<<std::endl;
 }
 
-FragTrap::FragTrap(FragTrap& copy) : Hit_Points(copy.Hit_Points)
+FragTrap::FragTrap(FragTrap& copy)
 {
-
+    *this = copy;
 }
 
 FragTrap&       FragTrap::operator=(FragTrap& copy)

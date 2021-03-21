@@ -17,25 +17,27 @@ NinjaTrap::~NinjaTrap()
 
 void    NinjaTrap::ninjaShoebox(ClapTrap & target)
 {
-    target.setHp(-15);
-    std::cout<< Name << " throw a shoebox at "<< target.getName() << " dealing 15 damage ";
+    target.setHp(15);
+    std::cout<< Name << " throw a shoebox at ClapTrap"<< target.getName() << " dealing 15 damage\n";
+}
+
+void    NinjaTrap::ninjaShoebox(ScavTrap & target)
+{
+    target.setHp(15);
+    std::cout<< Name << " throw a shoebox at ScavTrap"<< target.getName() << " dealing 15 damage ";
     std::cout<< target.getName() << " got : " << target.getHp() << " Hp left\n";
 }
 
-void    NinjaTrap::ninjaRestore(ClapTrap & target)
+void    NinjaTrap::ninjaShoebox(FragTrap & target)
 {
-    target.setEnergy(25);
-    std::cout<< Name << " using change the energy of "<< target.getName()<< std::endl;
+    target.setHp(15);
+    std::cout<< Name << " throw a shoebox at FragTrap"<< target.getName() << " dealing 15 damage ";
+    std::cout<< target.getName() << " got : " << target.getHp() << " Hp left\n";
 }
 
-void    NinjaTrap::ninjaRename(ClapTrap & target)
+void    NinjaTrap::ninjaShoebox(NinjaTrap & target)
 {
-    target.setName("NinjaSoldier");
-    std::cout<< Name << " use the develloper power to rename his oppenent to NinjaSoldier\n";
-}
-
-void    NinjaTrap::meleeAttack(std::string const& target)
-{
-    (void)target;
-    std::cout<<"attacking from ninja class "<< target <<std::endl;
+    target.setHp(15);
+    std::cout<< Name << " throw a shoebox at NinjaTrap"<< target.getName() << " dealing 15 damage ";
+    std::cout<< target.getName() << " got : " << target.getHp() << " Hp left\n";
 }

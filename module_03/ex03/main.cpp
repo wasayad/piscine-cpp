@@ -7,6 +7,7 @@ int main()
     FragTrap max("max");
     ScavTrap loubouf("loubouf");
     NinjaTrap koro("koro");
+    ClapTrap test;
     max.vaulthunter_dot_exe("unpokemon");
     max.meleeAttack("drake");
     max.rangedAttack("drake");
@@ -21,7 +22,8 @@ int main()
     koro.takeDamage(25);
     koro.beRepaired(50);
     koro.ninjaShoebox(max);
-    koro.ninjaRename(max);
     max.takeDamage(25);
-    koro.ninjaRestore(loubouf);
+    koro.ninjaShoebox(loubouf);
+    koro.ninjaShoebox(koro);
+    koro.ninjaShoebox(test);
 }

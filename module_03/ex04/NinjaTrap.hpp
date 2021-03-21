@@ -6,7 +6,8 @@
 #include <cctype>
 #include <time.h>
 #include "ClapTrap.hpp"
-
+#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 class   NinjaTrap : virtual public ClapTrap
 {
     public:
@@ -14,9 +15,9 @@ class   NinjaTrap : virtual public ClapTrap
         NinjaTrap(std::string n_name);
         ~NinjaTrap();
         void            ninjaShoebox(ClapTrap & target);
-        void            ninjaRestore(ClapTrap & target);
-        void            ninjaRename(ClapTrap & target);
-        void            meleeAttack(std::string const& target);
+        void            ninjaShoebox(ScavTrap & target);
+        void            ninjaShoebox(FragTrap & target);
+        void            ninjaShoebox(NinjaTrap & target);
 };
 
 #endif

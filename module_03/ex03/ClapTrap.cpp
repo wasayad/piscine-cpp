@@ -73,7 +73,10 @@ void    ClapTrap::beRepaired(unsigned int amount)
 
 void    ClapTrap::setHp(int n_np)
 {
-    Hit_Points += n_np;
+     if (Hit_Points  < (n_np + Armor_Damage_Reduction))
+        Hit_Points = 0;
+    else if (!(Hit_Points + (n_np + Armor_Damage_Reduction) > Max_Hit_Points))
+        Hit_Points += (n_np + Armor_Damage_Reduction);
 }
 
 void    ClapTrap::setName(std::string n_name)
