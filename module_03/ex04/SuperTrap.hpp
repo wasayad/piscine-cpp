@@ -1,7 +1,6 @@
 #ifndef SUPERTRAP_HPP
 #define SUPERTRAP_HPP
 
-//#include "SuperTrap.hpp"
 #include "FragTrap.hpp"
 #include "NinjaTrap.hpp"
 #include "SuperTrap.hpp"

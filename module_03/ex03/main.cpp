@@ -7,7 +7,7 @@ int main()
     FragTrap max("max");
     ScavTrap loubouf("loubouf");
     NinjaTrap koro("koro");
-    ClapTrap test;
+    ClapTrap test("default", 100 ,100 ,100 ,50 ,50 , 50, 5);
     max.vaulthunter_dot_exe("unpokemon");
     max.meleeAttack("drake");
     max.rangedAttack("drake");

@@ -1,6 +1,6 @@
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap()
+FragTrap::FragTrap(): ClapTrap("default", 100, 100, 100, 100, 30, 20, 5)
 {
     
 }

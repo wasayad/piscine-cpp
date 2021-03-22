@@ -1,6 +1,8 @@
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap()
+ScavTrap::ScavTrap():Hit_Points(100), 
+Max_Hit_Points(100), Energy_points(50), Max_Energy_Points(50), Level(1), Name("default"), Melee_Attack_Damage(20), Ranged_Attack_Damage(15),
+Armor_Damage_Reduction(3)
 {
 
 }

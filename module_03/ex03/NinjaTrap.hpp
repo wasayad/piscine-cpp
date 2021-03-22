@@ -13,6 +13,8 @@ class   NinjaTrap : public ClapTrap
     public:
         NinjaTrap();
         NinjaTrap(std::string n_name);
+        NinjaTrap(NinjaTrap &copy);
+        NinjaTrap&   operator=(NinjaTrap &copy);
         ~NinjaTrap();
         void            ninjaShoebox(ClapTrap & target);
         void            ninjaShoebox(ScavTrap & target);

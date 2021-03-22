@@ -1,6 +1,8 @@
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap()
+FragTrap::FragTrap(): Hit_Points(100), 
+Max_Hit_Points(100), Energy_points(100), Max_Energy_Points(100), Level(1), Name("default"), Melee_Attack_Damage(30), Ranged_Attack_Damage(20),
+Armor_Damage_Reduction(5)
 {
 
 }

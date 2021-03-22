@@ -1,11 +1,11 @@
 #include "SuperTrap.hpp"
 
-SuperTrap::SuperTrap()
+SuperTrap::SuperTrap(): ClapTrap("Default", 0, 0, 0, 0, 0, 0, 0), FragTrap("default"),NinjaTrap("default")
 {
 
 }
 
-SuperTrap::SuperTrap(std::string n_name): FragTrap(n_name),NinjaTrap(n_name)
+SuperTrap::SuperTrap(std::string n_name): ClapTrap("Default", 0, 0, 0, 0, 0, 0, 0), FragTrap(n_name),NinjaTrap(n_name)
 {
     setVar(n_name);
     std::cout<<"42 electronics create : SuperTrap "<<std::endl;
@@ -30,7 +30,7 @@ SuperTrap::~SuperTrap()
     std::cout<<"42 electronics destroyed : SuperTrap "<<std::endl;
 }
 
-SuperTrap::SuperTrap(SuperTrap& copy): FragTrap("empty"),NinjaTrap("n_name")
+SuperTrap::SuperTrap(SuperTrap& copy):ClapTrap("Default", 0, 0, 0, 0, 0, 0, 0), FragTrap("empty"),NinjaTrap("n_name")
 {
     *this = copy;
 }

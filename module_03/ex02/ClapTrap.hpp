@@ -9,7 +9,6 @@
 class   ClapTrap
 {
     public:
-        ClapTrap();
         ClapTrap(std::string n_name, int hp, int mhp, int mana, int mmana, int ad, int adr, int armor);
         ClapTrap(ClapTrap& copy);
         ~ClapTrap();
@@ -28,6 +27,8 @@ class   ClapTrap
         unsigned int             Melee_Attack_Damage;
         unsigned int             Ranged_Attack_Damage;
         unsigned int             Armor_Damage_Reduction;
+    private:
+            ClapTrap();
 };
 
 #endif

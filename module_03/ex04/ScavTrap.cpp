@@ -1,6 +1,6 @@
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap()
+ScavTrap::ScavTrap(): ClapTrap("default", 100, 100, 50, 50, 20, 15, 3)
 {
     
 }
