@@ -57,5 +57,5 @@ void            SuperTrap::meleeAttack(std::string const& target)
 
 void            SuperTrap::rangedAttack(std::string const& target)
 {
-    FragTrap::meleeAttack(target);
+    FragTrap::rangedAttack(target);
 }
