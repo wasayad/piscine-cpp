@@ -1,6 +1,6 @@
 #include "SuperTrap.hpp"
 
-SuperTrap::SuperTrap(): ClapTrap("Default", 0, 0, 0, 0, 0, 0, 0), FragTrap("default"),NinjaTrap("default")
+SuperTrap::SuperTrap(): ClapTrap("Default", 100, 100, 120, 120, 60, 20, 5), FragTrap("default"),NinjaTrap("default")
 {
 
 }
