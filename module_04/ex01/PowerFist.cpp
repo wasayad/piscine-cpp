@@ -17,7 +17,9 @@ PowerFist::PowerFist(PowerFist & copy)
 
 PowerFist&     PowerFist::operator=(PowerFist & copy)
 {
-    copy.getAPCost();
+    setApCost(copy.getAPCost());
+    setName(copy.getName());
+    setDamage(copy.getDamage());
     return (*this);
 }
 

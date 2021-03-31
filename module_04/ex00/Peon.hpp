@@ -10,12 +10,13 @@
 class Peon : public Victim
 {
     public:
-        Peon();
         Peon(std::string n_name);
         Peon(Peon &copy);
-        ~Peon();
+        virtual ~Peon();
         Peon&               operator=(Peon &copy);
         void                 getPolymorphed()const;
+    private:
+        Peon();
 };
 
 std::ostream&      operator<<(std::ostream& os, Peon const& f);

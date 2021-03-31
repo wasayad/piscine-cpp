@@ -62,3 +62,13 @@ void    ScavTrap::challengeNewcomer(std::string const & target)
     }
 
 }
+
+void            ScavTrap::rangedAttack(std::string const& target)
+{
+    std::cout<<"ranged attack from ScavTrap class to "<< target <<std::endl;
+}
+
+void    ScavTrap::meleeAttack(std::string const& target)
+{
+    std::cout<<"melee attack from ScavTrap class to "<< target <<std::endl;
+}

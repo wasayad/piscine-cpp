@@ -3,6 +3,7 @@
 
 Victim::Victim()
 {
+    name = "default";
 }
 
 Victim::Victim(std::string n_name): name(n_name)

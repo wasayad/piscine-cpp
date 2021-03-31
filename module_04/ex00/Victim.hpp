@@ -12,7 +12,7 @@ class Victim
         Victim();
         Victim(std::string n_name);
         Victim(Victim &copy);
-        ~Victim();
+        virtual ~Victim();
         Victim&    operator=(Victim &copy);
         const std::string    introduce()const;
         void                 getPolymorphed()const;

@@ -3,12 +3,15 @@
 
 Enemy::Enemy()
 {
+    Type = "Default";
+    Hp = 100;
 }
 
 Enemy::~Enemy()
 {
-
+    Hp = 0;
 }
+
 
 Enemy::Enemy(Enemy & copy)
 {
@@ -51,4 +54,14 @@ void        Enemy::takeDamage(int amount)
     {
         Hp = Hp - amount;
     }
+}
+
+void        Enemy::setHp(int const hp)
+{
+    Hp = hp;
+}
+
+void        Enemy::setType(std::string const type)
+{
+    Type = type;
 }

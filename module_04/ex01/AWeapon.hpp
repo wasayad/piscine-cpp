@@ -12,11 +12,14 @@ class AWeapon
         AWeapon();
         AWeapon(std::string const &name, int apcost, int damage);
         AWeapon(AWeapon &copy);
-        ~AWeapon();
+        virtual ~AWeapon();
         AWeapon&            operator=(AWeapon &copy);
         std::string const   getName() const;
         int                 getAPCost() const;
         int                 getDamage() const;
+        void                setName(std::string const name);
+        void                setApCost(int const ap);
+        void                setDamage(int const da);
         virtual void        attack() const = 0;
     private:
         std::string Name;

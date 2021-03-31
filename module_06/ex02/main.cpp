@@ -1,6 +1,23 @@
-#include "A.hpp"
-#include "B.hpp"
-#include "C.hpp"
+#include <time.h>
+#include <iostream>
+
+class Base 
+{
+    public:
+        virtual ~Base(){}
+};
+
+class A : public Base
+{
+};
+
+class B : public Base
+{
+};
+
+class C : public Base
+{
+};
 
 Base    *generate(void)
 {
@@ -22,15 +39,15 @@ Base    *generate(void)
 
 void identify_from_pointer(Base * p)
 {
-    if (A *a = dynamic_cast<A*>(p))
+    if (dynamic_cast<A*>(p))
     {
         std::cout << "Type : A\n";
     }
-    else if (B *b = dynamic_cast<B*>(p))
+    else if (dynamic_cast<B*>(p))
     {
         std::cout << "Type : B\n";
     }
-    else if (C *b = dynamic_cast<C*>(p))
+    else if (dynamic_cast<C*>(p))
     {
         std::cout << "Type : C\n";
     }

@@ -21,6 +21,7 @@ class   NinjaTrap : virtual public ClapTrap
         void            ninjaShoebox(FragTrap & target);
         void            ninjaShoebox(NinjaTrap & target);
         void            meleeAttack(std::string const& target);
+        void            rangedAttack(std::string const& target);
 };
 
 #endif

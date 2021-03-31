@@ -12,7 +12,6 @@
 class Sorcerer
 {
     public:
-        Sorcerer();
         Sorcerer(std::string n_name, std::string n_title);
         Sorcerer(Sorcerer &copy);
         ~Sorcerer();
@@ -24,6 +23,7 @@ class Sorcerer
     private:
         std::string name;
         std::string title;
+        Sorcerer();
 };
 
 

@@ -18,7 +18,8 @@ RadScorpion::RadScorpion(RadScorpion & copy)
 
 RadScorpion&     RadScorpion::operator=(RadScorpion & copy)
 {
-    copy.getHp();
+    setHp(copy.getHp());
+    setType(copy.getType());
     return (*this);
 }
 

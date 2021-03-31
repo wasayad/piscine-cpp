@@ -3,6 +3,9 @@
 
 AWeapon::AWeapon()
 {
+    Name = "default";
+    Damage = 0;
+    Apcost = 0;
 }
 
 AWeapon::~AWeapon()
@@ -41,4 +44,18 @@ int        AWeapon::getAPCost() const
 int        AWeapon::getDamage() const
 {
     return (Damage);
+}
+
+void       AWeapon::setDamage(int const da)
+{
+    Damage = da;
+}
+
+void       AWeapon::setApCost(int const ap)
+{
+    Apcost = ap;
+}
+void       AWeapon::setName(std::string const name)
+{
+    Name = name;
 }

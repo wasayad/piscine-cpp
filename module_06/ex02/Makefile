@@ -1,5 +1,4 @@
-SRC =    main.cpp\
-		 Base.cpp\
+SRC =    main.cpp
 
 
 HEADERS = 

@@ -60,3 +60,13 @@ void    FragTrap::vaulthunter_dot_exe(std::string const & target)
     }
 
 }
+
+void            FragTrap::rangedAttack(std::string const& target)
+{
+    std::cout<<"ranged attack from FragTrap class to "<< target <<std::endl;
+}
+
+void    FragTrap::meleeAttack(std::string const& target)
+{
+    std::cout<<"melee attack from FragTrap class to "<< target <<std::endl;
+}

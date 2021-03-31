@@ -12,7 +12,7 @@ class RadScorpion : public Enemy
     public:
         RadScorpion();
         RadScorpion(RadScorpion &copy);
-        ~RadScorpion();
+        virtual ~RadScorpion();
         RadScorpion&            operator=(RadScorpion &copy);
 };
 

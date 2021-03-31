@@ -1,15 +1,26 @@
 #ifndef ITER_HPP
 #define ITER_HPP
 
-template <typename T, typename S, typename R>
-
-void    iter(T *array, S lenght, R &func)
+#include <iostream>
+#include <typeinfo>
+template <typename T, typename S>
+void    iter(T *array, S lenght, void (*func)(T &))
 {
-    int     i = 0;
-
+    S     i = 0;
     while (i < lenght)
     {
-        func(array[i]);
+        func((array)[i]);
+        i++;
+    }
+}
+
+template <typename T, typename S>
+void    iter(T const *array, S lenght, void (*func)(T const &))
+{
+    S     i = 0;
+    while (i < lenght)
+    {
+        func((array)[i]);
         i++;
     }
 }

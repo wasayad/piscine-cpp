@@ -30,7 +30,7 @@ SuperTrap::~SuperTrap()
     std::cout<<"42 electronics destroyed : SuperTrap "<<std::endl;
 }
 
-SuperTrap::SuperTrap(SuperTrap& copy):ClapTrap("Default", 0, 0, 0, 0, 0, 0, 0), FragTrap("empty"),NinjaTrap("n_name")
+SuperTrap::SuperTrap(SuperTrap& copy):ClapTrap("Default", copy.Armor_Damage_Reduction, copy.Hit_Points, copy.Max_Hit_Points, 0, 0, 0, 0), FragTrap(copy.Name),NinjaTrap("n_name")
 {
     *this = copy;
 }

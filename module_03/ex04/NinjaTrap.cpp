@@ -64,5 +64,10 @@ void    NinjaTrap::ninjaShoebox(NinjaTrap & target)
 
 void    NinjaTrap::meleeAttack(std::string const& target)
 {
-    std::cout<<"melee attack from NinjaTrap class "<< target <<std::endl;
+    std::cout<<"melee attack from NinjaTrap class to "<< target <<std::endl;
+}
+
+void    NinjaTrap::rangedAttack(std::string const& target)
+{
+    std::cout<<"ranged attack from NinjaTrap class to "<< target <<std::endl;
 }

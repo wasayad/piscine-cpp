@@ -32,8 +32,8 @@ int main(int argc, char **argv)
     {
         std::cout << "char: impossible\n";
     }
-    else if(std::isprint(i) == 1)
-        std::cout << "char: "<< static_cast<char>(i) << "\n";
+    else if(std::isprint(d) == 1)
+        std::cout << "char: "<< static_cast<char>(d) << "\n";
     else
         std::cout << "char: Non displayable\n";
 

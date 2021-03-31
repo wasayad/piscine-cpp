@@ -64,3 +64,13 @@ void    NinjaTrap::ninjaShoebox(NinjaTrap & target)
     std::cout<< Name << " throw a shoebox at NinjaTrap"<< target.getName() << " dealing 15 damage ";
     std::cout<< target.getName() << " got : " << target.getHp() << " Hp left\n";
 }
+
+void    NinjaTrap::meleeAttack(std::string const& target)
+{
+    std::cout<<"melee attack from NinjaTrap class to "<< target <<std::endl;
+}
+
+void    NinjaTrap::rangedAttack(std::string const& target)
+{
+    std::cout<<"ranged attack from NinjaTrap class to "<< target <<std::endl;
+}

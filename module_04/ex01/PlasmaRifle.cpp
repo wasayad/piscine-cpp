@@ -17,7 +17,9 @@ PlasmaRifle::PlasmaRifle(PlasmaRifle & copy)
 
 PlasmaRifle&     PlasmaRifle::operator=(PlasmaRifle & copy)
 {
-    copy.getAPCost();
+    setApCost(copy.getAPCost());
+    setName(copy.getName());
+    setDamage(copy.getDamage());
     return (*this);
 }
 

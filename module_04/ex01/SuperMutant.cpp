@@ -18,7 +18,8 @@ SuperMutant::SuperMutant(SuperMutant & copy)
 
 SuperMutant&     SuperMutant::operator=(SuperMutant & copy)
 {
-    copy.getHp();
+    setHp(copy.getHp());
+    setType(copy.getType());
     return (*this);
 }
 

@@ -13,8 +13,8 @@ public:
     SuperTrap(std::string n_name);
     SuperTrap(SuperTrap& copy);
     ~SuperTrap();
-    SuperTrap&       operator=(SuperTrap& copy);
-    void                setVar(std::string n_name);
+    SuperTrap&      operator=(SuperTrap& copy);
+    void            setVar(std::string n_name);
     void            meleeAttack(std::string const& target);
     void            rangedAttack(std::string const& target);
 };
